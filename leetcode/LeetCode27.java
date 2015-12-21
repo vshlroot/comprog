@@ -1,0 +1,23 @@
+package leetcode;
+
+/**
+ * Created by vishalss on 12/21/2015.
+ */
+/*
+Given an array and a value, remove all instances of that value in place and return the new length.
+
+The order of elements can be changed. It doesn't matter what you leave beyond the new length. 
+ */
+public class LeetCode27 {
+    public int removeElement(int[] nums, int val) {
+        int length=0;
+        for(int i=0,j=0;i<nums.length;i++){
+            if(nums[i]!=val){
+                nums[j]=nums[i];
+                j++;
+                length++;
+            }
+        }
+        return length;
+    }
+}
